@@ -68,3 +68,23 @@ button:hover {
     margin-bottom: 10px;
     border-radius: 10px;
 }
+
+/* Drag & Drop Area */
+#drop-area {
+    border: 2px dashed #58a6ff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    background: #1e1e1e;
+    color: #aaa;
+}
+
+#drop-area.dragover {
+    background: #2a2a2a;
+}
+
+#fileElem {
+    display: none;
+}
