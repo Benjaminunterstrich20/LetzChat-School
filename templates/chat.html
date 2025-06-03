@@ -2,12 +2,17 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Ghost Skript 👻</title>
+    <title>Ghost Skript 👻 – Raum {{ room_code }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="chat-container">
-        <h1>Ghost Skript 👻</h1>
+        <h1>
+            <a href="{{ url_for('home') }}" title="Neuen Raumcode eingeben"
+               style="text-decoration: none; color: #58a6ff;">
+                Ghost Skript 👻
+            </a> – Raum: {{ room_code }}
+        </h1>
         <form method="POST">
             <input type="text" name="name" placeholder="Dein Name (optional)" class="input-name">
             <textarea name="message" placeholder="Deine Nachricht..." required class="input-msg"></textarea>
