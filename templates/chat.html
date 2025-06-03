@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghost Skript 👻</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Ghost Skript 👻</h1>
+        <form method="POST">
+            <input type="text" name="name" placeholder="Dein Name (optional)" class="input-name">
+            <textarea name="message" placeholder="Deine Nachricht..." required class="input-msg"></textarea>
+            <button type="submit">Senden</button>
+        </form>
+        <div class="chat-log">
+            {% for msg in messages %}
+                <div class="chat-msg">
+                    <strong>{{ msg.name }}</strong> <em>{{ msg.timestamp }}</em><br>
+                    {{ msg.message }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
